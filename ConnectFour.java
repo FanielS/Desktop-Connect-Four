@@ -6,6 +6,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
 
+/**
+ * @author Faniel S. Abraham
+ * version 1.1
+ */
+
 public class ConnectFour extends JFrame {
     static JButton[][] buttons = new JButton[6][7];
     static boolean gameOn = true;
@@ -48,16 +53,16 @@ public class ConnectFour extends JFrame {
         ButtonReset.addActionListener(e -> {
             ConfirmWindow confirm = new ConfirmWindow();
             confirm.setVisible(true);
-            confirm.setLocationRelativeTo(this);
         });
         bottom.add(ButtonReset);
     }
 
-    private class ConfirmWindow extends JFrame implements ActionListener {
+    private static class ConfirmWindow extends JFrame implements ActionListener {
 
         public ConfirmWindow() {
             setSize(250, 100);
             setLayout(new BorderLayout());
+            setLocationRelativeTo(null);
 
             JLabel confirmLabel = new JLabel("Are you sure you want to reset?", SwingConstants.CENTER);
             add(confirmLabel, BorderLayout.CENTER);
@@ -88,7 +93,7 @@ public class ConnectFour extends JFrame {
                     }
                 }
                 ConnectFour.gameOn = true;
-                Checker.player = "O";
+                Checker.player = "O";   // game should always start with "X"
                 dispose();
             } else if (action.equals("No")) {
                 dispose();
@@ -103,7 +108,6 @@ class Checker implements ActionListener {
 
     /**
      * Handles button clicks on the 6 * 7 game board.
-     *
      * @param e - ActionEvent object
      */
     @Override
@@ -134,6 +138,11 @@ class Checker implements ActionListener {
         }
     }
 
+    /**
+     * checks if there is a winner after every move. If there is a winner, it sets ConnectFour.gameOn to false
+     * so that no clicking any cell will do nothing
+     * @param player - the player ("X" or "O") who just made a move
+     */
     void checkWinner(String player) {
         /* Since the game board has the same number of columns for every row, we can use any row to get column length.
          I used buttons[0] here. */
