@@ -9,7 +9,11 @@ Behind the scene the playing board looks like the below image.
 <img width="507" alt="Screen Shot 2022-09-26 at 12 59 03 PM" src="https://user-images.githubusercontent.com/94970266/192236147-2034e244-d73a-415e-8e38-77f2a5bacceb.png">
 
 When you start the game, you will first see empty playing board 
+
 <img width="568" alt="Screen Shot 2022-09-26 at 1 05 17 PM" src="https://user-images.githubusercontent.com/94970266/192237339-032dac9c-78c1-4d32-a8db-6d9d463b5b5e.png">
 
 .. Then each player takes turns to create a connection of four cells either horizontal, vertical or diagonal. Once, such connection is made, the winning cells will be highlighted with different color and the game is over. You may start a new game by resetting the current game. 
+
 <img width="568" alt="Screen Shot 2022-09-26 at 1 07 57 PM" src="https://user-images.githubusercontent.com/94970266/192237938-6a0cd756-c81c-4bf7-8873-9de13899b5bf.png">
+
+[### You may read more about the game and the rules here]([url](https://en.wikipedia.org/wiki/Connect_Four))
