@@ -17,3 +17,7 @@ When you start the game, you will first see empty playing board
 <img width="568" alt="Screen Shot 2022-09-26 at 1 07 57 PM" src="https://user-images.githubusercontent.com/94970266/192237938-6a0cd756-c81c-4bf7-8873-9de13899b5bf.png">
 
 [## You may read more about the game and the rules here](https://en.wikipedia.org/wiki/Connect_Four)
+
+
+## Technology
+Java, Swing Framework
